@@ -1,0 +1,160 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  width: 100%;
+}
+
+.registration-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Responsive width */
+  max-width: 2000px; /* Limit max width */
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column */
+  gap: 20px;
+}
+
+.form-right {
+  grid-column-end: span 2;
+}
+
+.register-button {
+  width: 150px;
+  height: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: calc(100% - 12px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+  font-size: small;
+  margin-top: 5px;
+}
+
+.gender-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap; 
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media (min-width: 1200px) {
+  button {
+    padding: 15px 30px;
+    font-size: 18px; 
+  }
+}
+
+
+
+.terms {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive design */
+@media (min-width: 576px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column for small devices */
+  }
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; /* Retain single column for medium devices */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for large devices */
+    gap: 40px;
+  }
+
+  .registration-form {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
